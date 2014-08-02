@@ -11,7 +11,8 @@
 @implementation MainScene
 
 -(void)play {
-    CCLOG(@"Play method invoked");
+    CCScene *gamePlayScene = [CCBReader loadAsScene:@"Gameplay"];
+    [[CCDirector sharedDirector] replaceScene:gamePlayScene];
 }
 
 @end
